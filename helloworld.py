@@ -1,43 +1,11 @@
-# Python cache
-__pycache__/
-*.pyc
+from flask import Flask
 
-# PTVS analysis
-.ptvs/
+app = Flask(__name__)
 
-# Build results
-/bin/
-/obj/
-
-# Visual studio & User-specific files
-*local_settings.py
-*.suo
-*.user
-*.sln.docstates
-.vs
-*.sln
-*.pyproj
-*.pubxml
-
-# Auto-generated virtual environment
-/env/
-
-# Auto-generated web.config
-/web.config
-
-# Auto-collected static files folder
-/static/
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Mac desktop service store files
-.DS_Store
-
+@app.route('/')
+def index():
+		return 'Hello World!'
+		
+if __name__ == "__main__":
+	app.run()
+	
